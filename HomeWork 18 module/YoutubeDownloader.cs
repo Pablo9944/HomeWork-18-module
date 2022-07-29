@@ -40,7 +40,7 @@ namespace HomeWork_18_module
 
             string title = Console.ReadLine() + ".mp4";
             //Скачивание
-            await youtubeClient.Videos.DownloadAsync(videoUrl, title);
+            await youtubeClient.Videos.DownloadAsync(videoUrl, title, builder => builder.SetPreset(ConversionPreset.UltraFast));
 
 
             Console.WriteLine("Скачивание прошло успешно");
